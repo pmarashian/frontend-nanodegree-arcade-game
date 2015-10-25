@@ -16,11 +16,11 @@ var Score = function() {
  */
 Score.prototype.render = function() {
 
-    ctx.font = "24px 'Open Sans'";
-    ctx.textAlign = "left";
+    ctx.font = '24px "Open Sans"';
+    ctx.textAlign = 'left';
 
-    ctx.fillStyle = "black";
-    ctx.fillText( "Score: " + this.score, this.x, this.y );
+    ctx.fillStyle = 'black';
+    ctx.fillText( 'Score: ' + this.score, this.x, this.y );
 
 };
 

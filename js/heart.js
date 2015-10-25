@@ -48,7 +48,7 @@ LifeMeter.prototype.reset = function() {
  */
 var Heart = function( place ) {
 
-    this.sprite = "images/Heart.png";
+    this.sprite = 'images/Heart.png';
 
     // space hearts equally apart based on a "row" value
     this.x = 650 - (place-1)*40;
