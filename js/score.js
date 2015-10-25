@@ -1,7 +1,7 @@
-/*
-    Tracks and renders game score
+/**
+ * @description Score Meter Class.
+ * @constructor
  */
-
 var Score = function() {
 
     this.x = 10;
@@ -11,6 +11,9 @@ var Score = function() {
 
 };
 
+/**
+ * @description Render the score.
+ */
 Score.prototype.render = function() {
 
     ctx.font = "24px 'Open Sans'";
@@ -21,12 +24,18 @@ Score.prototype.render = function() {
 
 };
 
+/**
+ * @description Reset the score to zero.
+ */
 Score.prototype.reset = function() {
 
     this.score = 0;
 
 };
 
+/**
+ * @description Increase the score.
+ */
 Score.prototype.add = function( score ) {
 
     this.score += score;

@@ -1,3 +1,7 @@
+/**
+ * @description Player Class.
+ * @constructor
+ */
 var Player = function() {
 
     this.sprite = 'images/char-boy.png';
@@ -8,16 +12,20 @@ var Player = function() {
 
 };
 
+/**
+ * @description Resets player position to middle of top row of grass.
+ */
 Player.prototype.resetPosition = function() {
-
-    // set player position to middle of top row of grass
 
     this.x = 303;
     this.y = 390;
 
 };
 
-Player.prototype.update = function(dt) {
+/**
+ * @description Resets player position to middle of top row of grass.
+ */
+Player.prototype.update = function() {
 
     // 58 is the top row of stone
 
@@ -31,6 +39,10 @@ Player.prototype.update = function(dt) {
 
 };
 
+/**
+ * @description Handle keyboard input
+ * @param {string} key - represents key that was just pressed.
+ */
 Player.prototype.handleInput = function( key ) {
 
     var deltaX = 101;
@@ -70,12 +82,18 @@ Player.prototype.handleInput = function( key ) {
 
 };
 
+/**
+ * @description Renders player sprite.
+ */
 Player.prototype.render = function() {
 
     ctx.drawImage( Resources.get(this.sprite), this.x, this.y );
 
 };
 
+/**
+ * @description Logic to be performed when player hits a bug.
+ */
 Player.prototype.getHit = function() {
 
     this.lives--;
