@@ -25,7 +25,7 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
+    canvas.width = 707;
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
@@ -91,10 +91,13 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
+
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
+
         player.update();
+
     }
 
     /* This function initially draws the "game level", it will then call
@@ -112,11 +115,12 @@ var Engine = (function(global) {
                 'images/stone-block.png',   // Row 1 of 3 of stone
                 'images/stone-block.png',   // Row 2 of 3 of stone
                 'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/stone-block.png',   // Row 4 of 3 of stone
                 'images/grass-block.png',   // Row 1 of 2 of grass
                 'images/grass-block.png'    // Row 2 of 2 of grass
             ],
-            numRows = 6,
-            numCols = 5,
+            numRows = 7,
+            numCols = 7,
             row, col;
 
         /* Loop through the number of rows and columns we've defined above
@@ -153,6 +157,10 @@ var Engine = (function(global) {
         });
 
         player.render();
+
+        lifeMeter.render();
+
+        scoreMeter.render();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -171,8 +179,11 @@ var Engine = (function(global) {
         'images/stone-block.png',
         'images/water-block.png',
         'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/enemy-bug-right.png',
+        'images/enemy-bug-left.png',
+        'images/char-boy.png',
+        'images/Key.png',
+        'images/Heart.png'
     ]);
     Resources.onReady(init);
 
